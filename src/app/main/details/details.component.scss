@@ -1,0 +1,42 @@
+#details {
+    label {
+        margin-bottom: 0.3rem;
+    }
+    .form-control-plaintext {
+        padding-top: 0.1rem;
+    }
+    .planet-section {
+        min-height: 58px;
+
+        ul.planet-details-list {
+            li {
+                padding: 4px 8px 4px 0px;
+                i {
+                    margin-right: 6px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .sidebar {
+        &.card {
+            background-color: transparent;
+            box-shadow: none !important;
+            border: none !important;
+            &:hover {
+                background-color: transparent !important;
+                box-shadow: none !important;
+                border: none !important;
+                transform: scale(1) !important;
+            }
+            .list-group-item {
+                background-color: rgba(247, 247, 247, 0.64);
+                margin-bottom: 4px;
+            }
+            .list-group-item:first-child {
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+        }
+    }
+}

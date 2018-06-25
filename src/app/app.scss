@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------
+ * Project Name: Pawa Responsive Template
+ * Project URI: http://pawa.paytron.com.ng
+ * Author: Siliconbear
+ * Author URI: http://siliconbear.com/
+ * Description: An application that helps you buy light accross Africa
+ * Version: 1.0
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Bootstrap v4 (http://getbootstrap.com)
+ * Copyright 2017 Paytron.
+ -------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. General Styles.
+2. Header Styles.
+3. Top Content Styles.
+4. info Section Styles.
+5. Services Section Styles.
+6. Message Section Styles.
+7. Pricing Section Styles.
+8. Custom Plan Section Styles.
+9. Features Section Styles.
+10. Testimonials Section Styles.
+11. More Features Section Styles.
+12. Footer Section Styles.
+13. Sign in - Sign up Pages Styles.
+14. Inner Pages Styles.
+15. Responsive Styles.
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+	1. General Styles
+-------------------------------------------------------------------*/
+@media(min-width:768px){
+    .container-fluid {
+        padding-right: 64px !important;
+        padding-left: 64px !important;
+    }
+}
+
+:host {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+
+    main {
+      position: relative;
+    }
+    
+    router-outlet ~ * {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.logo {
+    text-decoration: none !important;
+}
+
+.topbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+
+    .alert {
+        text-align: center;
+        margin-bottom: 0 !important;
+    }
+}
+
+.navbar {
+    background-color: #1b1b1b;
+    background-image: url('../assets/images/header-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    color: #fff !important;
+    padding-bottom: 6px !important;
+    padding-top: 6px !important;
+}
+
+.navbar-toggler-right {
+    margin-top: 12px;
+    right: 0px;
+}
+
+body {
+    background: #fee588;
+    // background-image: linear-gradient(180deg, rgba(255,255,255,0) 60%, #fff),linear-gradient(70deg, #dbedff 32%, #ebfff0);
+    transition: opacity 0.3s ease-in;
+}
+
+
+.card, .search-bar {
+    border: 1px solid rgba(232, 206, 101, 0.55) !important;
+}
+
+.card, .list-group-item {
+    &:hover {
+        background: #f7f7f7 !important;
+        -moz-box-shadow: 0 0 4px rgb(232, 206, 101);
+        -webkit-box-shadow: 0 0 4px rgb(232, 206, 101);
+        box-shadow: 0 0 4px rgb(232, 206, 101);
+        transform: scale(1.01);
+    }
+}
+
+.display-1, .display-2, .display-3,.display-4, .display-5, .display-6 {
+    letter-spacing: -2px;
+}
+
+form {
+    margin-top: 36px;
+
+    .input-group-prepend > .btn {
+        padding-left: 0.75rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .form-action {
+
+        a {
+            margin-top: 12px;
+            color: #a5a5a5;
+            text-decoration: underline; 
+        }
+
+        .form-check{
+
+            .form-check-input {
+                height: 30px;
+                width: 30px;
+            }
+
+            .form-check-text{
+                display: block;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+
+.dataTables_wrapper {
+    &.container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        .dataTables_scrollBody {
+          min-height: 320px;
+        }
+    }
+
+}
+
+.inner-footer {
+	padding: 15px 0; 
+	margin-left: auto;
+	margin-right: auto;
+	.media {
+		max-width: 460px;
+		.media-body {
+			font-size: 11px;
+		}
+	}
+}
+
+@media(max-width:768px){
+	.inner-footer {
+		position: relative;
+        margin-top: 60px;
+        
+		.container {
+			padding: 0;
+		}
+	}
+}
+
+@media(max-width:768px){
+    .container {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 991px){
+    .navbar-toggleable-md .navbar-nav .dropdown-menu {
+        display: block !important;
+    }
+}
+
+@supports (zoom:2) {
+	input[type="radio"],  input[type="checkbox"]{
+		zoom: 1.1;
+	}
+}
+
+@supports not (zoom:2) {
+	input[type="radio"],  input[type="checkbox"]{
+		transform: scale(1.1);
+		margin: 15px;
+	}
+}
